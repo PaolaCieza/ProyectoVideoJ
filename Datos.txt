@@ -1,0 +1,15 @@
+INICIO ✅
+
+INTRODUCCIÓN - falta muñeco bailando, aparecer cartel.
+
+NIVEL 1 - Aparezcan cosas con sangre, personajes de relleno (uno camine, uno echado, *uno sentado*, *nadar*), poner más partículas (neblina a los bordes), paredes invisibles, aquí no hay mounstros, dejar mensaje "reune el mapa", poner pistola en la mesa. 
+
+NIVEL 2 - Encontrar arma(s), encontrar la primera parte del mapa, matar a los mounstruos, ir al artefacto que permite cambiar de escena.
+
+NIVEL3 - Matar a los enemigos (organización criminal), recoger balas, recoger vidas, recoger tiempo.
+
+NIVELN° - 
+
+NIVEL FINAL - Encontrar a la flaca (flaca en jaula, con gritos), eliminar al peor mounstruo, 
+
+NIVEL MULTIPLAYER- Escena de pareja o 4 personas que tengan que matar a mounstruos en tiempo limitado y con balas limitadas. Puntaje del que más mounstros mató. Enemigos ilimitados.Escena de bosquet o de fábrica.
