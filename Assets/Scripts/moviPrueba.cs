@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movi : MonoBehaviour
+public class moviPrueba : MonoBehaviour
 {
     // Camera mycam;
     // void Start()
