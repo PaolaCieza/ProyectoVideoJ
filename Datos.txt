@@ -10,6 +10,6 @@ NIVEL3 - Matar a los enemigos (organización criminal), recoger balas, recoger v
 
 NIVELN° - 
 
-NIVEL FINAL - Encontrar a la flaca (flaca en jaula, con gritos), eliminar al peor mounstruo, 
+NIVEL FINAL - Encontrar a la flaca (flaca encima de una máquina), eliminar a la pandilla y un "mounstruo/jefe" con mucha vida en el cuarto de la flaca 
 
 NIVEL MULTIPLAYER- Escena de pareja o 4 personas que tengan que matar a mounstruos en tiempo limitado y con balas limitadas. Puntaje del que más mounstros mató. Enemigos ilimitados.Escena de bosquet o de fábrica.
