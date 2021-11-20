@@ -5016,7 +5016,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668905231}
-  m_LocalRotation: {x: 0.80628425, y: -0.0000000010865259, z: -0.0000000018561768, w: 0.59152836}
+  m_LocalRotation: {x: 0.80628425, y: 0.0000000010865259, z: 0.0000000018561768, w: 0.59152836}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8873,7 +8873,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1165754879
 MonoBehaviour:
@@ -8895,7 +8895,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1c0a35a844930fe4f9def5209eaef089, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4909fd1668c20b042863a3d2862590d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12500,7 +12500,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556734470}
-  m_LocalRotation: {x: -0.05166206, y: -0.0000000023476205, z: -1.0073496e-10, w: 0.9986646}
+  m_LocalRotation: {x: -0.05166206, y: 0.0000000023476243, z: 1.00822975e-10, w: 0.9986646}
   m_LocalPosition: {x: 0, y: 1.63, z: -1.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -18100,7 +18100,7 @@ PrefabInstance:
       objectReference: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
     - target: {fileID: 8318789440788385447, guid: da930735f5fe0734796c7d2ce9027140, type: 3}
       propertyPath: m_JumpPower
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8318789440794985957, guid: da930735f5fe0734796c7d2ce9027140, type: 3}
       propertyPath: m_Name

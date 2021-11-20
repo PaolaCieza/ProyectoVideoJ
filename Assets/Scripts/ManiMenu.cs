@@ -9,6 +9,7 @@ public class ManiMenu : MonoBehaviour
     [SerializeField] private GameObject menu;
     [SerializeField] private GameObject menucooperativo;
     [SerializeField] private GameObject menucooperativoescena;
+    
     public void EscenaJuego(){
         SceneManager.LoadScene("Intro");
     }

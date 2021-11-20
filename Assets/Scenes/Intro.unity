@@ -1464,6 +1464,7 @@ GameObject:
   - component: {fileID: 568211156}
   - component: {fileID: 568211158}
   - component: {fileID: 568211157}
+  - component: {fileID: 568211159}
   m_Layer: 5
   m_Name: Cartel
   m_TagString: Untagged
@@ -1530,6 +1531,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568211155}
   m_CullTransparentMesh: 1
+--- !u!114 &568211159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568211155}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f50116bcc20712e40ba616251888d26b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TiempoDeVida: 5
 --- !u!1001 &607420427
 PrefabInstance:
   m_ObjectHideFlags: 0
