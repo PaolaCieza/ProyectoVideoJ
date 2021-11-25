@@ -69,9 +69,7 @@ public class RE_ThirdPersonInput : ThirdPersonUserControl
             Vector3 aimVector = new Vector3(x, 0, z);
             Quaternion rotation = Quaternion.LookRotation(aimVector, Vector3.up);
             transform.rotation = rotation;
-            Debug.Log(x);
-            Debug.Log(aimVector);
-            Debug.Log(rotation);
+
 
         }
         else {  // Si no está apuntando
