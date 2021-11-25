@@ -14,11 +14,11 @@ public class SimpleShoot : MonoBehaviour
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private Transform barrelLocation;
 
-    [SerializeField] private Transform bulletlLocation;
+    [SerializeField] private Transform burretLocation;
     [SerializeField] private Transform casingExitLocation;
 
     [Header("Settings")]
-    [Tooltip("Specify time to destory the casing object")] [SerializeField] private float destroyTimer = 2f;
+    [Tooltip("Specify time to destory the casing object")] [SerializeField] private float destroyTimer = 3f;
     [Tooltip("Bullet Speed")] [SerializeField] private float shotPower = 500f;
     [Tooltip("Casing Ejection Speed")] [SerializeField] private float ejectPower = 150f;
 
@@ -61,16 +61,22 @@ public class SimpleShoot : MonoBehaviour
         { return; }
 
         // Create a bullet and add force on it in direction of the barrel
-        
-        
         RaycastHit hit;
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, ~8))
         {
-            Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
+            //GameObject bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
+            //bullet.transform.LookAt(hit.point);
+            //bullet.GetComponent<Rigidbody>().AddForce(hit.point * shotPower);
+            
+            // if(hit.collider.GetComponent<Rigidbody>()){
+            //     hit.collider.GetComponent<Rigidbody>().AddForce(hit.point * shotPower);
+            // }
+            //Destroy(bullet, destroyTimer);
             //Destroy(hit.collider.gameObject);
             Debug.Log(hit.collider.name);
         }
+
 
     }
 
