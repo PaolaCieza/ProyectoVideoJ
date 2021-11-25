@@ -12,9 +12,10 @@ public class SimpleShoot : MonoBehaviour
 
     [Header("Location Refrences")]
     [SerializeField] private Animator gunAnimator;
+
+    [SerializeField] private Animator shootAnimator;
     [SerializeField] private Transform barrelLocation;
 
-    [SerializeField] private Transform burretLocation;
     [SerializeField] private Transform casingExitLocation;
 
     [Header("Settings")]
@@ -22,6 +23,18 @@ public class SimpleShoot : MonoBehaviour
     [Tooltip("Bullet Speed")] [SerializeField] private float shotPower = 500f;
     [Tooltip("Casing Ejection Speed")] [SerializeField] private float ejectPower = 150f;
 
+    private AudioSource sonido;
+    public AudioClip sonidobala;
+    private Transform cam;
+
+    private float temp = 0;
+
+    public GameObject obj;
+
+
+    private void Awake() {
+        cam = Camera.main.transform;
+    }
 
     void Start()
     {
@@ -30,15 +43,20 @@ public class SimpleShoot : MonoBehaviour
 
         if (gunAnimator == null)
             gunAnimator = GetComponentInChildren<Animator>();
+
+        
+
+        sonido = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         //If you want a different input, change it here
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.Q))
         {
             //Calls animation on the gun that has the relevant animation events that will fire
             gunAnimator.SetTrigger("Fire");
+            shootAnimator.SetTrigger ("Shoot");
         }
     }
 
@@ -51,6 +69,8 @@ public class SimpleShoot : MonoBehaviour
             //Create the muzzle flash
             GameObject tempFlash;
             tempFlash = Instantiate(muzzleFlashPrefab, barrelLocation.position, barrelLocation.rotation);
+            sonido.clip = sonidobala;
+            sonido.Play();
 
             //Destroy the muzzle flash effect
             Destroy(tempFlash, destroyTimer);
@@ -61,22 +81,35 @@ public class SimpleShoot : MonoBehaviour
         { return; }
 
         // Create a bullet and add force on it in direction of the barrel
+
         RaycastHit hit;
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, ~8))
+        
+
+        Vector3 direction = cam.TransformDirection(new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f,0.05f),1));
+        //Debug.DrawRay(cam.position, direction * 100f, Color.red, 5f);
+        if (Physics.Raycast(cam.position, direction, out hit, Mathf.Infinity, ~6))
         {
+            
+            if(hit.transform.gameObject.tag == "Enemy"){
+                Damage damage = hit.transform.GetComponent<Damage>();
+                damage.setDamage();
+            }
             //GameObject bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
             //bullet.transform.LookAt(hit.point);
             //bullet.GetComponent<Rigidbody>().AddForce(hit.point * shotPower);
-            
+
             // if(hit.collider.GetComponent<Rigidbody>()){
             //     hit.collider.GetComponent<Rigidbody>().AddForce(hit.point * shotPower);
             // }
             //Destroy(bullet, destroyTimer);
+            Instantiate(obj, hit.point, Quaternion.identity);
             //Destroy(hit.collider.gameObject);
-            Debug.Log(hit.collider.name);
-        }
 
+            //burretLocation.position = a;
+            //Debug.Log(hit.collider.name);
+        }
+           
 
     }
 
@@ -99,4 +132,9 @@ public class SimpleShoot : MonoBehaviour
         Destroy(tempCasing, destroyTimer);
     }
 
+  
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * 10);
+    }
 }
