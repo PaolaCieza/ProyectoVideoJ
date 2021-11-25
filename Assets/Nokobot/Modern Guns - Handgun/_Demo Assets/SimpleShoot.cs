@@ -13,6 +13,8 @@ public class SimpleShoot : MonoBehaviour
     [Header("Location Refrences")]
     [SerializeField] private Animator gunAnimator;
     [SerializeField] private Transform barrelLocation;
+
+    [SerializeField] private Transform bulletlLocation;
     [SerializeField] private Transform casingExitLocation;
 
     [Header("Settings")]
@@ -59,7 +61,16 @@ public class SimpleShoot : MonoBehaviour
         { return; }
 
         // Create a bullet and add force on it in direction of the barrel
-        Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
+        
+        
+        RaycastHit hit;
+
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, Mathf.Infinity, ~8))
+        {
+            Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation).GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
+            //Destroy(hit.collider.gameObject);
+            Debug.Log(hit.collider.name);
+        }
 
     }
 
