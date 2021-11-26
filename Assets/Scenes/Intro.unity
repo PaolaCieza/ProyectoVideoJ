@@ -1464,7 +1464,6 @@ GameObject:
   - component: {fileID: 568211156}
   - component: {fileID: 568211158}
   - component: {fileID: 568211157}
-  - component: {fileID: 568211159}
   m_Layer: 5
   m_Name: Cartel
   m_TagString: Untagged
@@ -1531,19 +1530,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568211155}
   m_CullTransparentMesh: 1
---- !u!114 &568211159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 568211155}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f50116bcc20712e40ba616251888d26b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TiempoDeVida: 5
 --- !u!1001 &607420427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5079,7 +5065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511ea31add9023848a8ae393c7ba22b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  llamada: {fileID: 8300000, guid: 3748973837596b94e9e4208a87429215, type: 3}
+  llamada: {fileID: 8300000, guid: a59f97237e7a277438193225dc288cb2, type: 3}
 --- !u!81 &1880379786
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5145,7 +5131,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.484
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

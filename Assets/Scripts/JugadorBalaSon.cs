@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JugadorBalaSon : MonoBehaviour
 {
-     private AudioSource sonido;
+    private AudioSource sonido;
     public AudioClip sonidobala;
     void Start()
     {
