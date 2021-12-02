@@ -10,6 +10,11 @@ public class ManiMenu : MonoBehaviour
     [SerializeField] private GameObject menucooperativo;
     [SerializeField] private GameObject menucooperativoescena;
     
+    ControladorEscena controladorEscena;
+
+    void OnLevelWasLoaded(int level) {
+	Debug.Log(level);
+    }
     public void EscenaJuego(){
         SceneManager.LoadScene("Intro");
     }
@@ -17,6 +22,8 @@ public class ManiMenu : MonoBehaviour
     public void CargarNivel(string nombreNivel){
         SceneManager.LoadScene(nombreNivel);
     }
+
+
 
     public void Multijugador(){
         menu.SetActive(false);

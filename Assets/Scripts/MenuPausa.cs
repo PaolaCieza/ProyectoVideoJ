@@ -7,14 +7,28 @@ public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menuPausa;
+    [SerializeField] private GameObject textoBalas;
+    [SerializeField] private GameObject textoBotiquin;
+    [SerializeField] private GameObject textoTiempo;
+    [SerializeField] private GameObject barraVida;
 
+    public Scene scene;
+    // public string nombreNivelReiniciar;
     // private void juegoPausado = false;
 
+    private void Start() {
+        scene = SceneManager.GetActiveScene();
+    }
     public void Pausa(){
         // juegoPausado = true;
         Time.timeScale = 0;   
         botonPausa.SetActive(false);
+        textoBalas.SetActive(false);
+        textoBotiquin.SetActive(false);
+        textoTiempo.SetActive(false);
+        barraVida.SetActive(false);
         menuPausa.SetActive(true);
+        
     }
 
     public void Reanudar(){
@@ -24,10 +38,10 @@ public class MenuPausa : MonoBehaviour
         menuPausa.SetActive(false);
     }
 
-    // public void Reiniciar(){
-    //     Time.timeScale = 1f;
-    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    // }
+    public void Reiniciar(){
+        SceneManager.LoadScene(scene.buildIndex);
+        Reanudar();
+    }
     public void Inicio(){
         SceneManager.LoadScene("Inicio");
     }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ControlarTiempo : MonoBehaviour
 {
+    InventarioTiempo inventarioTiempo;
     public Animator animacion;  
     public Text txtReloj;
     public int tiempo;
@@ -18,6 +19,7 @@ public class ControlarTiempo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inventarioTiempo = GameObject.FindGameObjectWithTag("Player").GetComponent<InventarioTiempo>();
         tiempoMostrar = tiempo;
     }
 
@@ -39,14 +41,12 @@ public class ControlarTiempo : MonoBehaviour
         else{
             minutos = (int) tiempo / 60;
             segundos = (int) tiempo % 60;
-    
             texto = minutos.ToString("00") + ":" + segundos.ToString("00");
-    
+
             txtReloj.text = texto;
         }
-
-        
     }
+
 
     void GameOver(){
         animacion.SetTrigger("Dead");

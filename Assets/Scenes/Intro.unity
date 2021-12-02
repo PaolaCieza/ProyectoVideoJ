@@ -2030,6 +2030,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botonPausa: {fileID: 1551857495}
   menuPausa: {fileID: 857151110}
+  textoBalas: {fileID: 0}
+  textoBotiquin: {fileID: 0}
+  textoTiempo: {fileID: 0}
+  barraVida: {fileID: 0}
+  scene:
+    m_Handle: 0
 --- !u!1001 &744603868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5065,6 +5071,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511ea31add9023848a8ae393c7ba22b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tiempo_start: 0
+  tiempo_end: 10
   llamada: {fileID: 8300000, guid: a59f97237e7a277438193225dc288cb2, type: 3}
 --- !u!81 &1880379786
 AudioListener:

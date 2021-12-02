@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Intro : MonoBehaviour
 {
-    // public float tiempo_start; 
-    // public float tiempo_end; 
+    public float tiempo_start; 
+    public float tiempo_end; 
     private AudioSource sonido;
     public AudioClip llamada;
 
@@ -23,11 +23,11 @@ public class Intro : MonoBehaviour
             
         }
 
-        // tiempo_start += Time.deltaTime;
-        // if (tiempo_start >= tiempo_end) 
-        // {
-        //     Application.LoadLevel("Nivell 1");
-        // }
+        tiempo_start += Time.deltaTime;
+        if (tiempo_start >= tiempo_end) 
+        {
+            Application.LoadLevel("Nivel 2");
+        }
 
     }
 }
