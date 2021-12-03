@@ -35,6 +35,10 @@ public class MenuPausa : MonoBehaviour
         // juegoPausado = false;
         Time.timeScale = 1f;
         botonPausa.SetActive(true);
+        textoBalas.SetActive(true);
+        textoBotiquin.SetActive(true);
+        textoTiempo.SetActive(true);
+        barraVida.SetActive(true);
         menuPausa.SetActive(false);
     }
 
