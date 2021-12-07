@@ -5,8 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ManipuladorVida : MonoBehaviour
-{
-
+{    
+    private string vidaPrefsName = "Vida";
     //LLamando a los script de vida y el inventario del botiquin  
     InventarioBotiquin inventarioBotiquin;
     VidaPlayer playerVida;
@@ -17,15 +17,19 @@ public class ManipuladorVida : MonoBehaviour
     public int cantidad;
     public float damageTime;
     float currentDamageTime;
+    
 
     [SerializeField] private GameObject mensajeMuerte;
+
+    private void Awake() {
+        playerVida = GameObject.FindWithTag("Player").GetComponent<VidaPlayer>();
+    }
 
     void Start()
     {
         inventarioBotiquin = GameObject.FindGameObjectWithTag("Player").GetComponent<InventarioBotiquin>();
 
-        // sonido = GetComponent<AudioSource>();
-        playerVida = GameObject.FindWithTag("Player").GetComponent<VidaPlayer>();
+        // sonido = GetComponent<AudioSource>();        
     }
 
     private void OnTriggerStay(Collider other) {
@@ -42,10 +46,10 @@ public class ManipuladorVida : MonoBehaviour
         if(playerVida.vida <= 0){
             animacion.SetTrigger("Dead");
             mensajeMuerte.SetActive(true);
+
             // sonido.clip = sonidomensajemuerte;
             // sonido.Play();
-        } 
-        Debug.Log(playerVida.vida);
+        }        
 
         if(Input.GetKeyDown(KeyCode.L)){
             if(inventarioBotiquin.CantidadBotiquin >= 1){
@@ -61,8 +65,12 @@ public class ManipuladorVida : MonoBehaviour
     }
 
     public void reiniciarentrecomillar(){
-        SceneManager.LoadScene("Nivel 2");
+
+        /** PRUEBAS **/
+        /* PlayerPrefs.SetFloat(vidaPrefsName, 100f); */
+        /** FIN **/        
         
+        SceneManager.LoadScene("Nivel 2");
     }
 
 
