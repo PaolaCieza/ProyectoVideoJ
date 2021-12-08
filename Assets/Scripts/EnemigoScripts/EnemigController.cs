@@ -13,21 +13,27 @@ public class EnemigController : MonoBehaviour
     public bool atacando;
     public float velocidad;
 
+    private VidaPlayer vidaPlayer;
+
     // Jugador
     public GameObject jugador;
+
+    public float currentDamageTime;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         jugador = GameObject.FindWithTag("Player");
+        vidaPlayer = jugador.GetComponent<VidaPlayer>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, jugador.transform.position) > 5) {
+        if (Vector3.Distance(transform.position, jugador.transform.position) > 8) {
             
             animator.SetBool("run", false);
             cronometro += 1 * Time.deltaTime;
@@ -57,10 +63,10 @@ public class EnemigController : MonoBehaviour
                 break;
         }
         } else {
-            if (Vector3.Distance(transform.position, jugador.transform.position) > 2) {
+            if (Vector3.Distance(transform.position, jugador.transform.position) > 1) {
                 
                 var lookPos = jugador.transform.position - transform.position;
-                lookPos.y = 0;
+                // lookPos.y = 0;
                 var rotation = Quaternion.LookRotation(lookPos);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
                 animator.SetBool("walk", false);
@@ -74,6 +80,11 @@ public class EnemigController : MonoBehaviour
                 animator.SetBool("run", false);
 
                 animator.SetBool("attack", true);
+                currentDamageTime += Time.deltaTime;
+                if(currentDamageTime > 0.5f){
+                    vidaPlayer.vida -= 5;
+                    currentDamageTime = 0.0f;
+                }
                 atacando = true;
             }
 
