@@ -57,7 +57,7 @@ public class EnemigController : MonoBehaviour
                 break;
         }
         } else {
-            if (Vector3.Distance(transform.position, jugador.transform.position) > velocidad && !atacando) {
+            if (Vector3.Distance(transform.position, jugador.transform.position) > 2) {
                 
                 var lookPos = jugador.transform.position - transform.position;
                 lookPos.y = 0;
@@ -66,9 +66,8 @@ public class EnemigController : MonoBehaviour
                 animator.SetBool("walk", false);
 
                 animator.SetBool("run", true);
-                transform.Translate(Vector3.forward * 0.5f * Time.deltaTime);
-
-                animator.SetBool("attack",false);
+                transform.Translate(Vector3.forward * velocidad * Time.deltaTime);
+                animator.SetBool("attack", false);
 
             } else {
                 animator.SetBool("walk", false);

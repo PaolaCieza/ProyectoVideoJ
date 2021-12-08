@@ -6,7 +6,7 @@ public class Damage : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    int life = 10;
+    int life = 1;
 
     void Start()
     {
