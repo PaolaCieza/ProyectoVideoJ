@@ -13035,6 +13035,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   botonPausa: {fileID: 1280571215}
   menuPausa: {fileID: 1216332239}
+  textoBalas: {fileID: 0}
+  textoBotiquin: {fileID: 0}
+  textoTiempo: {fileID: 0}
+  barraVida: {fileID: 0}
+  scene:
+    m_Handle: 0
 --- !u!114 &1520688605
 MonoBehaviour:
   m_ObjectHideFlags: 0
