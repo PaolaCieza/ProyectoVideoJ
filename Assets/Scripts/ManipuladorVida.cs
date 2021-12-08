@@ -41,6 +41,16 @@ public class ManipuladorVida : MonoBehaviour
             }
         }
     }
+    
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "Player"){
+            currentDamageTime += Time.deltaTime;
+            if(currentDamageTime > damageTime){
+                playerVida.vida += cantidad;
+                currentDamageTime = 0.0f;
+            }
+        }
+    }
 
     void Update(){
         if(playerVida.vida <= 0){
