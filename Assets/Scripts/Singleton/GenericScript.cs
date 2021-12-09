@@ -74,6 +74,9 @@ public class GenericScript : MonoBehaviour
 
     private void OnDestroy() {
         
+        // Solo guardamos las escenas jugables
+        if (escenaActual >=2 && escenaActual < 5) PlayerPrefs.SetInt(escenaAPrefsName, escenaActual);
+        
         if(jugadorSC.win) {
             SaveData();
         }
@@ -132,10 +135,7 @@ public class GenericScript : MonoBehaviour
                 PlayerPrefs.SetInt(botiquinesPrefsName5, botiquines.CantidadBotiquin);
                 PlayerPrefs.SetInt(balasPrefsName5, balas.Cantidad);
                 break;            
-        }
-
-        // Solo guardamos las escenas jugables
-        if (escenaActual >=2 && escenaActual < 5) PlayerPrefs.SetInt(escenaAPrefsName, escenaActual);
+        }        
 
         /** FIN **/
         PlayerPrefs.SetInt(moneyPrefsName, money);

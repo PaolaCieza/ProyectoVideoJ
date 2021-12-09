@@ -4954,6 +4954,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd5c0012280ca834d9f4ee1dee8947c6, type: 3}
+--- !u!114 &598179570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 464143562732890595, guid: bd5c0012280ca834d9f4ee1dee8947c6, type: 3}
+  m_PrefabInstance: {fileID: 598179569}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &618243889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5519,7 +5530,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8097687, y: 1}
+    m_SensorSize: {x: 2.3324938, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6254,7 +6265,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8097687, y: 1}
+    m_SensorSize: {x: 2.3324938, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -11526,7 +11537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bajas: 0
   nroEnemigos: 0
-  txtBajas: {fileID: 0}
+  txtBajas: {fileID: 598179570}
   pasarNivelGO: {fileID: 1626471518}
 --- !u!4 &1050660280
 Transform:
@@ -12765,7 +12776,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8097687, y: 1}
+    m_SensorSize: {x: 2.3324938, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -14045,7 +14056,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.8097687, y: 1}
+    m_SensorSize: {x: 2.3324938, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -14061,7 +14072,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398342494}
-  m_LocalRotation: {x: 0.83874995, y: 0.018227272, z: 0.027367324, w: 0.54352313}
+  m_LocalRotation: {x: 0.8384514, y: 0.023466833, z: 0.035234258, w: 0.5433297}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
