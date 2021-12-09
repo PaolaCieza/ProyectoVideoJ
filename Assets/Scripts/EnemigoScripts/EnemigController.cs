@@ -25,8 +25,7 @@ public class EnemigController : MonoBehaviour
     public bool damage;
 
     private void OnDestroy() {
-        genericSC.bajas++;
-        genericSC.RefreshUI();
+        
     }
 
 

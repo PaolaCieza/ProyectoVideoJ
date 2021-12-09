@@ -9,9 +9,11 @@ public class Damage : MonoBehaviour
     public int life = 5;
     private EnemigController controller;
     public Animator animator;
+    private GenericScript genericSC;
 
     void Start()
     {
+        genericSC = GameObject.Find("GenericObject").GetComponent<GenericScript>();
         animator = GetComponent<Animator>();
         controller = this.gameObject.GetComponent<EnemigController>();
     }
@@ -20,7 +22,8 @@ public class Damage : MonoBehaviour
     void Update()
     {
         if(life <= 0){
-            
+            genericSC.bajas++;
+            genericSC.RefreshUI();
             Destroy(transform.gameObject);
         }   
     }
