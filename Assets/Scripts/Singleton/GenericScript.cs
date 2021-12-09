@@ -47,6 +47,8 @@ public class GenericScript : MonoBehaviour
     private int collectableValue=5;
     private int itemCost = 10;
 
+    public GameObject msjBuscar;
+
     private void Awake() 
     {        
         playerVida = GameObject.FindWithTag("Player").GetComponent<VidaPlayer>();
@@ -69,7 +71,11 @@ public class GenericScript : MonoBehaviour
     }
     
     private void Update() {
-        if (bajas == nroEnemigos) pasarNivelGO.SetActive(true);
+        if (bajas == nroEnemigos){
+         pasarNivelGO.SetActive(true);
+         msjBuscar.SetActive(true);
+        }
+
     }
 
     private void OnDestroy() {
