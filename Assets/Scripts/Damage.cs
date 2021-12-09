@@ -6,7 +6,7 @@ public class Damage : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    int life = 5;
+    public int life = 5;
     private EnemigController controller;
     public Animator animator;
 

@@ -29,7 +29,6 @@ public class SimpleShoot : MonoBehaviour
 
     private float temp = 0;
 
-    public GameObject obj;
 
     private Inventario balas;
 
