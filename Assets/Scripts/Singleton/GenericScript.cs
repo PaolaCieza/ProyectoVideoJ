@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class GenericScript : MonoBehaviour
@@ -10,10 +11,15 @@ public class GenericScript : MonoBehaviour
     private InventarioBotiquin botiquines;
     private Inventario balas;
     private Scene scene;
-    private int escenaActual;
+    private int escenaActual;    
     private string escenaAPrefsName = "EscenaActual";
     private RE_ThirdPersonInput jugadorSC;
-       
+    
+    // Bajas
+    public int bajas;
+    public int nroEnemigos;
+    public Text txtBajas;
+    public GameObject pasarNivelGO;
 
     // ESCENE Nro 2 = 3    
     private string vidaPrefsName3 = "Vida3";
@@ -49,6 +55,9 @@ public class GenericScript : MonoBehaviour
         jugadorSC = GameObject.FindWithTag("Player").GetComponent<RE_ThirdPersonInput>();
         scene = SceneManager.GetActiveScene();
         
+        bajas = 0;
+        nroEnemigos = 1;
+
         escenaActual = scene.buildIndex;
         LoadData();
     }
@@ -57,6 +66,10 @@ public class GenericScript : MonoBehaviour
     {
         userInterface = GameObject.FindGameObjectWithTag("GameController").GetComponent<UserInterface>();
         RefreshUI();
+    }
+    
+    private void Update() {
+        if (bajas == nroEnemigos) pasarNivelGO.SetActive(true);
     }
 
     private void OnDestroy() {
@@ -92,10 +105,11 @@ public class GenericScript : MonoBehaviour
         RefreshUI();
     }
 
-    private void RefreshUI()
+    public void RefreshUI()
     {
         balas.textBalas.text = "= " + balas.Cantidad;
         botiquines.textBotiquin.text = "= " + botiquines.CantidadBotiquin;
+        txtBajas.text = ""+bajas+" / "+nroEnemigos;
     }
 
     private void SaveData() {
