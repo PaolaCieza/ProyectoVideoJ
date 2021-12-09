@@ -92,7 +92,7 @@ public class GenericScript : MonoBehaviour
         /** PRUEBAS **/
         playerVida.vida = (PlayerPrefs.GetFloat(vidaPrefsName, 100f) <= 0) ? 100f : PlayerPrefs.GetFloat(vidaPrefsName, 100f);
         botiquines.CantidadBotiquin = (PlayerPrefs.GetInt(botiquinesPrefsName, 0));
-        balas.Cantidad = (PlayerPrefs.GetInt(balasPrefsName, 6) <= 0) ? 6 : PlayerPrefs.GetInt(balasPrefsName, 6);
+        balas.Cantidad = (PlayerPrefs.GetInt(balasPrefsName) <= 0) ? 6 : PlayerPrefs.GetInt(balasPrefsName, 6);
         /** FIN **/
         
         money = PlayerPrefs.GetInt(moneyPrefsName, 0);

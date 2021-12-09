@@ -31,9 +31,11 @@ public class SimpleShoot : MonoBehaviour
 
     public GameObject obj;
 
+    private Inventario balas;
 
     private void Awake() {
         cam = Camera.main.transform;
+        balas = GameObject.FindWithTag("Player").GetComponent<Inventario>();
     }
 
     void Start()
@@ -52,11 +54,12 @@ public class SimpleShoot : MonoBehaviour
     void Update()
     {
         //If you want a different input, change it here
-        if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.Q))
+        if (Input.GetButtonDown("Fire1") && Input.GetKey(KeyCode.Q) && balas.Cantidad > 0)
         {
             //Calls animation on the gun that has the relevant animation events that will fire
             gunAnimator.SetTrigger("Fire");
             shootAnimator.SetTrigger ("Shoot");
+            balas.Cantidad--;
         }
     }
 
@@ -71,7 +74,6 @@ public class SimpleShoot : MonoBehaviour
             tempFlash = Instantiate(muzzleFlashPrefab, barrelLocation.position, barrelLocation.rotation);
             sonido.clip = sonidobala;
             sonido.Play();
-
             //Destroy the muzzle flash effect
             Destroy(tempFlash, destroyTimer);
         }
@@ -86,7 +88,7 @@ public class SimpleShoot : MonoBehaviour
 
         
 
-        Vector3 direction = cam.TransformDirection(new Vector3(Random.Range(-0.05f, 0.05f), Random.Range(-0.05f,0.05f),1));
+        Vector3 direction = cam.TransformDirection(new Vector3(Random.Range(-0.02f, 0.05f), Random.Range(-0.02f,0.02f),1));
         //Debug.DrawRay(cam.position, direction * 100f, Color.red, 5f);
         if (Physics.Raycast(cam.position, direction, out hit, Mathf.Infinity, ~6))
         {
@@ -94,6 +96,7 @@ public class SimpleShoot : MonoBehaviour
             if(hit.transform.gameObject.tag == "Enemy"){
                 Damage damage = hit.transform.GetComponent<Damage>();
                 damage.setDamage();
+                //hit.collider.GetComponent<Rigidbody>().AddForce(hit.point * 5f);
             }
             //GameObject bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
             //bullet.transform.LookAt(hit.point);
@@ -103,7 +106,7 @@ public class SimpleShoot : MonoBehaviour
             //     hit.collider.GetComponent<Rigidbody>().AddForce(hit.point * shotPower);
             // }
             //Destroy(bullet, destroyTimer);
-            Instantiate(obj, hit.point, Quaternion.identity);
+            //Instantiate(obj, hit.point, Quaternion.identity);
             //Destroy(hit.collider.gameObject);
 
             //burretLocation.position = a;

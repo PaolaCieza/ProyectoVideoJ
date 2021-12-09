@@ -11,10 +11,9 @@ public class Inventario : MonoBehaviour
 
 
     void Start() {
-        
+        //textBalas.text = " = " + Cantidad;
     }
     void Update() {
-        // textBalas.text = " balas = " + Cantidad;
-        
+        //textBalas.text = " = " + Cantidad;
     }
 }
