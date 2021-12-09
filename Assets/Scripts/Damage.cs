@@ -28,8 +28,8 @@ public class Damage : MonoBehaviour
         }   
     }
 
-    public void setDamage(){
-        life--;
+    public void setDamage(int damage){
+        life = life - damage;
         Debug.Log("Me muerooooo");
         animator.SetTrigger("damage");
         controller.damage = true;

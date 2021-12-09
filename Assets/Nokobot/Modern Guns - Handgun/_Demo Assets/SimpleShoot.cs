@@ -29,6 +29,9 @@ public class SimpleShoot : MonoBehaviour
 
     private float temp = 0;
 
+    public int power = 1;
+    public float precision = 0.04f;
+    public float scope = 20f;
 
     private Inventario balas;
 
@@ -88,14 +91,14 @@ public class SimpleShoot : MonoBehaviour
 
         
 
-        Vector3 direction = cam.TransformDirection(new Vector3(Random.Range(-0.02f, 0.05f), Random.Range(-0.02f,0.02f),1));
+        Vector3 direction = cam.TransformDirection(new Vector3(Random.Range(-precision, precision), Random.Range(-precision, precision),1));
         //Debug.DrawRay(cam.position, direction * 100f, Color.red, 5f);
-        if (Physics.Raycast(cam.position, direction, out hit, Mathf.Infinity, ~6))
+        if (Physics.Raycast(cam.position, direction, out hit, scope, ~6))
         {
             
             if(hit.transform.gameObject.tag == "Enemy"){
                 Damage damage = hit.transform.GetComponent<Damage>();
-                damage.setDamage();
+                damage.setDamage(power);
                 //hit.collider.GetComponent<Rigidbody>().AddForce(hit.point * 5f);
             }
             //GameObject bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
