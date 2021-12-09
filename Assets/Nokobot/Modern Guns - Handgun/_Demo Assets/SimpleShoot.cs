@@ -59,6 +59,7 @@ public class SimpleShoot : MonoBehaviour
             gunAnimator.SetTrigger("Fire");
             shootAnimator.SetTrigger ("Shoot");
             balas.Cantidad--;
+            balas.textBalas.text = "= " + balas.Cantidad;
         }
     }
 
