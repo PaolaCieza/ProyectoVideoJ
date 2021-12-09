@@ -54,8 +54,8 @@ public class MenuPausa : MonoBehaviour
         Debug.Log("holi giles");
     }
     public void VolverACasa(){
-        SceneManager.LoadScene(1);
-        Debug.Log("holi giles x2");
+        SceneManager.LoadScene("Inicio");
+        Debug.Log("llevar a inicio");
     }
 
 
