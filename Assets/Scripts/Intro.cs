@@ -27,7 +27,7 @@ public class Intro : MonoBehaviour
         tiempo_start += Time.deltaTime;
         if (tiempo_start >= tiempo_end) 
         {
-            Application.LoadLevel("Nivel 2");
+            Application.LoadLevel("Nivell 1");
         }
 
     }
