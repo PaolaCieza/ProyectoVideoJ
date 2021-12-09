@@ -11,6 +11,8 @@ public class Damage : MonoBehaviour
     public Animator animator;
     private GenericScript genericSC;
 
+    public GameObject effectDie;
+
     void Start()
     {
         genericSC = GameObject.Find("GenericObject").GetComponent<GenericScript>();
@@ -22,14 +24,17 @@ public class Damage : MonoBehaviour
     void Update()
     {
         if(life <= 0){
+            GameObject die;
             genericSC.bajas++;
             genericSC.RefreshUI();
             Destroy(transform.gameObject);
+            die = Instantiate(effectDie, gameObject.transform.position, Quaternion.Euler(-90,0,0));
+            Destroy(die, 5f);
         }   
     }
 
-    public void setDamage(){
-        life--;
+    public void setDamage(int damage){
+        life = life - damage;
         Debug.Log("Me muerooooo");
         animator.SetTrigger("damage");
         controller.damage = true;
