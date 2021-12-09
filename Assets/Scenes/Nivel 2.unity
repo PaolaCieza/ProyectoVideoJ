@@ -2447,6 +2447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PasarEscena
       objectReference: {fileID: 0}
+    - target: {fileID: 9165066696716360538, guid: ce65239b102d209478934c0ad44f961c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9165066696716360543, guid: ce65239b102d209478934c0ad44f961c, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -11520,6 +11524,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d721b80e1e3d03a42b96206a6e6aa897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bajas: 0
+  nroEnemigos: 0
+  txtBajas: {fileID: 0}
+  pasarNivelGO: {fileID: 1626471518}
 --- !u!4 &1050660280
 Transform:
   m_ObjectHideFlags: 0
@@ -16295,6 +16303,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011716061034, guid: a22c0c7e17126fa4f89534dc98bcac8f, type: 3}
   m_PrefabInstance: {fileID: 1617915872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1626471518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9165066696716360538, guid: ce65239b102d209478934c0ad44f961c, type: 3}
+  m_PrefabInstance: {fileID: 264351155}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1627438724
 PrefabInstance:

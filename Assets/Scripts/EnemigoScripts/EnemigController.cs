@@ -15,6 +15,8 @@ public class EnemigController : MonoBehaviour
 
     private VidaPlayer vidaPlayer;
 
+    private GenericScript genericSC;
+
     // Jugador
     public GameObject jugador;
 
@@ -22,12 +24,18 @@ public class EnemigController : MonoBehaviour
 
     public bool damage;
 
+    private void OnDestroy() {
+        genericSC.bajas++;
+        genericSC.RefreshUI();
+    }
+
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
         jugador = GameObject.FindWithTag("Player");
+        genericSC = GameObject.Find("GenericObject").GetComponent<GenericScript>();
         vidaPlayer = jugador.GetComponent<VidaPlayer>();
         damage = false;
 

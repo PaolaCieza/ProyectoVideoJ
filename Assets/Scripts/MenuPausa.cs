@@ -10,7 +10,9 @@ public class MenuPausa : MonoBehaviour
     [SerializeField] private GameObject textoBalas;
     [SerializeField] private GameObject textoBotiquin;
     [SerializeField] private GameObject textoTiempo;
+    [SerializeField] private GameObject textoMuertes;
     [SerializeField] private GameObject barraVida;
+
 
     public Scene scene;
     // public string nombreNivelReiniciar;
@@ -26,9 +28,9 @@ public class MenuPausa : MonoBehaviour
         textoBalas.SetActive(false);
         textoBotiquin.SetActive(false);
         textoTiempo.SetActive(false);
+        textoMuertes.SetActive(false);
         barraVida.SetActive(false);
         menuPausa.SetActive(true);
-        
     }
 
     public void Reanudar(){
@@ -38,6 +40,7 @@ public class MenuPausa : MonoBehaviour
         textoBalas.SetActive(true);
         textoBotiquin.SetActive(true);
         textoTiempo.SetActive(true);
+        textoMuertes.SetActive(true);
         barraVida.SetActive(true);
         menuPausa.SetActive(false);
     }
@@ -47,8 +50,14 @@ public class MenuPausa : MonoBehaviour
         Reanudar();
     }
     public void Inicio(){
-        SceneManager.LoadScene("Inicio");
+        SceneManager.LoadScene(0);
+        Debug.Log("holi giles");
     }
+    public void VolverACasa(){
+        SceneManager.LoadScene("Inicio");
+        Debug.Log("holi giles x2");
+    }
+
 
     public void Cerrar(){
         Debug.Log("Cerrando juego");
