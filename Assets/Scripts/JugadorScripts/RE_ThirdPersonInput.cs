@@ -7,7 +7,9 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 public class RE_ThirdPersonInput : ThirdPersonUserControl
 {
-
+    public bool win;
+    public bool lose;
+    
     public enum CAMERA_MODE { BASE, AIM };
 
     #region Atributos

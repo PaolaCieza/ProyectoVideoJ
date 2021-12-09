@@ -12,9 +12,16 @@ public class ManiMenu : MonoBehaviour
     
     ControladorEscena controladorEscena;
 
-    void OnLevelWasLoaded(int level) {
-	Debug.Log(level);
+    public int escenaGuardada;
+
+    private void Awake() {
+        escenaGuardada = PlayerPrefs.GetInt("EscenaActual", 3);        
     }
+
+    public void OnLevelWasLoaded() {
+	    SceneManager.LoadScene(escenaGuardada);
+    }
+
     public void EscenaJuego(){
         SceneManager.LoadScene("Intro");
     }
@@ -22,8 +29,6 @@ public class ManiMenu : MonoBehaviour
     public void CargarNivel(string nombreNivel){
         SceneManager.LoadScene(nombreNivel);
     }
-
-
 
     public void Multijugador(){
         menu.SetActive(false);

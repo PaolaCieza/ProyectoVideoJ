@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InventarioBotiquin : MonoBehaviour
 {
-    public int CantidadBotiquin = 0;
+    public int CantidadBotiquin;
 
     public Text textBotiquin;
 
