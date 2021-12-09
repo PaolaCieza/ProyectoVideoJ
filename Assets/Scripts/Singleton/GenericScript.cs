@@ -12,6 +12,7 @@ public class GenericScript : MonoBehaviour
     private Scene scene;
     private int escenaActual;
     private string escenaAPrefsName = "EscenaActual";
+    private RE_ThirdPersonInput jugadorSC;
        
 
     // ESCENE Nro 2 = 3    
@@ -45,6 +46,7 @@ public class GenericScript : MonoBehaviour
         playerVida = GameObject.FindWithTag("Player").GetComponent<VidaPlayer>();
         botiquines = GameObject.FindWithTag("Player").GetComponent<InventarioBotiquin>();
         balas = GameObject.FindWithTag("Player").GetComponent<Inventario>();
+        jugadorSC = GameObject.FindWithTag("Player").GetComponent<RE_ThirdPersonInput>();
         scene = SceneManager.GetActiveScene();
         
         escenaActual = scene.buildIndex;
@@ -58,6 +60,10 @@ public class GenericScript : MonoBehaviour
     }
 
     private void OnDestroy() {
+        
+        if(jugadorSC.win) {
+            SaveData();
+        }
 
         /**
         if (Object.win) {
