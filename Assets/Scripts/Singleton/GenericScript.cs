@@ -42,7 +42,7 @@ public class GenericScript : MonoBehaviour
     private string moneyPrefsName = "Money";
     private string itemsPrefsName = "Items";
 
-    private UserInterface userInterface;
+    // private UserInterface userInterface;
 
     private int collectableValue=5;
     private int itemCost = 10;
@@ -66,7 +66,7 @@ public class GenericScript : MonoBehaviour
 
     void Start()
     {
-        userInterface = GameObject.FindGameObjectWithTag("GameController").GetComponent<UserInterface>();
+        // userInterface = GameObject.FindGameObjectWithTag("GameController").GetComponent<UserInterface>();
         RefreshUI();
     }
     
