@@ -10,6 +10,8 @@ public class Damage : MonoBehaviour
     private EnemigController controller;
     public Animator animator;
     private GenericScript genericSC;
+    
+    public GameObject effectDie;
 
     void Start()
     {
@@ -22,9 +24,12 @@ public class Damage : MonoBehaviour
     void Update()
     {
         if(life <= 0){
+            GameObject die;
             genericSC.bajas++;
             genericSC.RefreshUI();
             Destroy(transform.gameObject);
+            die = Instantiate(effectDie, gameObject.transform.position, Quaternion.Euler(-90,0,0));
+            Destroy(die, 6f);
         }   
     }
 
