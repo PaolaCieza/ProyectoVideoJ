@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4411993, g: 0.48997837, b: 0.570044, a: 1}
+  m_IndirectSpecularColor: {r: 0.4412002, g: 0.4899788, b: 0.5700455, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -816,6 +816,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4339898394216490, guid: 6c9e41e24d2bc6b488c927f43944457b, type: 3}
   m_PrefabInstance: {fileID: 506413056}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &465377016
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1211557185831184911, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_Name
+      value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2777323557533571100, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201745917553980529, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: animacion
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7201745917553980529, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
+      propertyPath: mensajeMuerte
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 327cfbe8375e6b647b8af4f375a9be95, type: 3}
 --- !u!1001 &506413056
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1420,7 +1485,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -1681,19 +1745,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8855731518518916010, guid: 069a30e75d3181540bac25b51896ebf3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.48497555
+      value: 0.48371118
       objectReference: {fileID: 0}
     - target: {fileID: 8855731518518916010, guid: 069a30e75d3181540bac25b51896ebf3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7484009
+      value: 0.74644977
       objectReference: {fileID: 0}
     - target: {fileID: 8855731518518916010, guid: 069a30e75d3181540bac25b51896ebf3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.25079644
+      value: 0.25332075
       objectReference: {fileID: 0}
     - target: {fileID: 8855731518518916010, guid: 069a30e75d3181540bac25b51896ebf3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.3765581
+      value: 0.3803483
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 069a30e75d3181540bac25b51896ebf3, type: 3}
@@ -1910,7 +1974,6 @@ Terrain:
   m_DrawHeightmap: 1
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
-  m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
   m_MaterialTemplate: {fileID: 2100000, guid: e3694e4eb82c06d4b8309907deac269a, type: 2}
   m_BakeLightProbesForTrees: 1
